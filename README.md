@@ -86,9 +86,12 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
 
 ### [BONUS] Digital Wireframes & Mockups
 **Home page**
+
 <img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/122066670_802108780565309_600996336649320390_n.jpg?_nc_cat=109&ccb=2&_nc_sid=ae9488&_nc_ohc=whX2koCL7FYAX_2wP4R&_nc_ht=scontent-sjc3-1.xx&oh=ffbb7af13644c0b9e8baef5957fc6d79&oe=5FB65D4A" width=200>
 
+
 **Details page of Business**
+
 <img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/121973393_982919665562031_8504943379036429810_n.jpg?_nc_cat=101&ccb=2&_nc_sid=ae9488&_nc_ohc=-QtRJ8h4WBAAX_HN8WQ&_nc_ht=scontent-sjc3-1.xx&oh=14ffdc9d1cb58c29088fa30cedd58713&oe=5FB8F37E" width=200>
 
 ### [BONUS] Interactive Prototype
