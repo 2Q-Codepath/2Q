@@ -1,6 +1,3 @@
-Original App Design Project - README Template
-===
-
 # 2Q
 
 ## Table of Contents
@@ -97,10 +94,46 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+#User
+| Property      | Type            | Description          |
+| ------------- | --------------- | -------------------- |
+| username      | Pointer to user | current user         |
+| firstName     | String          | users first name     |
+| lastName      | String          | users last name      |
+| phoneNo       | Number          | users phone no.      |
+| email         | String          | users email address  |
+| password      | String          | users login password |
+
+#Queue
+| Property      | Type          | Description                 |
+| ------------- | ------------- | --------------------------- |
+| queueNum      | Number        | Position in queue           |
+| queueID       | String        | Unique ID for users queue   |
+| queueName     | String        | Name of queue               |
+| createdAt     | DateTime      | Date when queue was created |
+| updatedAt     | DateTime      | Date queue was last updated |
+| estWaitTime   | Number        | Wait time (minutes)         |
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Home Screen
+    - (Read/GET) Query live queues where user is in or hosting
+    - (Read/GET) Query live queues that user follows
+    - Search Bar
+        - (Read/GET) Query matching users or queues 
+- Explore Screen
+    - (Read/GET) Query queues in specified location
+- Create Queue Screen
+    - (Create/POST) Create a new Queue object
+- My Queues Screen
+    - (Read/GET) Query queues user is in or owns
+    - (Update/PUT) Update queue status (start/end or leave)
+    - (Delete) Delete existing queue
+- Profile Screen
+    - (Update/PUT) Update user account information 
+- Selected Queue Screen
+    - (Read/GET) Query logged in user object
+    - (Update/PUT) Update Queue information
+    - (Update/PUT) Update user(s) position in queue
+
