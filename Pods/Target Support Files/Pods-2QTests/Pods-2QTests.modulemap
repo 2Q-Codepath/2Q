@@ -1,0 +1,6 @@
+framework module Pods_2QTests {
+  umbrella header "Pods-2QTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
