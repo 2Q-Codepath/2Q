@@ -144,4 +144,4 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
 
 **Sign In**
 
-<img src="https://i.imgur.com/XDuCrDJ.gif" width=200>
+<img src="https://i.imgur.com/ewPnGe3.gif" width=200>
