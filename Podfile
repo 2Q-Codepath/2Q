@@ -6,8 +6,8 @@ target '2Q' do
   use_frameworks!
 
   # Pods for 2Q
-  pod "Parse"
-  pod "AlamofireImage"
+  	pod 'Parse'
+  	pod 'AlamofireImage'
 
   target '2QTests' do
     inherit! :search_paths
