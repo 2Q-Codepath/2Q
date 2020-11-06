@@ -24,9 +24,9 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
 
 **Required Must-have Stories**
 
-- [ ] User sign up
+- [x] User sign up
 - [ ] Queue page
-- [ ] User login
+- [x] User login
 - [ ] Home - Queue viewer
 - [ ] Explore page
 - [ ] Current in line queues
@@ -137,3 +137,11 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
     - (Update/PUT) Update Queue information
     - (Update/PUT) Update user(s) position in queue
 
+### Progress
+**Sign Up**
+
+<img src="https://i.imgur.com/BLl37WV.gif" width=200>
+
+**Sign In**
+
+<img src="https://i.imgur.com/ewPnGe3.gif" width=200>
