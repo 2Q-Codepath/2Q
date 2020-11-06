@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35569BAC255516070076C2FB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35569BAB255516070076C2FB /* SignInViewController.swift */; };
 		35B08355255489D100CE4A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B08354255489D100CE4A3D /* AppDelegate.swift */; };
 		35B08357255489D100CE4A3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B08356255489D100CE4A3D /* SceneDelegate.swift */; };
 		35B0835C255489D100CE4A3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B0835A255489D100CE4A3D /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		1C2295781B387CF3CA7EC816 /* Pods-2QTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2QTests.release.xcconfig"; path = "Target Support Files/Pods-2QTests/Pods-2QTests.release.xcconfig"; sourceTree = "<group>"; };
+		35569BAB255516070076C2FB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		35B08351255489D100CE4A3D /* 2Q.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2Q.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B08354255489D100CE4A3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35B08356255489D100CE4A3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				35B0835F255489D700CE4A3D /* LaunchScreen.storyboard */,
 				35B08362255489D700CE4A3D /* Info.plist */,
 				FEC334A1255506530091D972 /* SignUpViewController.swift */,
+				35569BAB255516070076C2FB /* SignInViewController.swift */,
 			);
 			path = 2Q;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35569BAC255516070076C2FB /* SignInViewController.swift in Sources */,
 				FEC334A2255506530091D972 /* SignUpViewController.swift in Sources */,
 				35B08355255489D100CE4A3D /* AppDelegate.swift in Sources */,
 				35B08357255489D100CE4A3D /* SceneDelegate.swift in Sources */,
