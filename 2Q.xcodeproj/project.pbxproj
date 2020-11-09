@@ -15,6 +15,7 @@
 		35B08361255489D700CE4A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B0835F255489D700CE4A3D /* LaunchScreen.storyboard */; };
 		35B0836C255489D800CE4A3D /* _QTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0836B255489D800CE4A3D /* _QTests.swift */; };
 		35B08377255489D800CE4A3D /* _QUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B08376255489D800CE4A3D /* _QUITests.swift */; };
+		35F964BB25589C6100B2A8B0 /* CreateQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F964BA25589C6100B2A8B0 /* CreateQueueViewController.swift */; };
 		64A692FA175E9CA5098EDB38 /* Pods_2Q_2QUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52BBB3EB92BB156B5D9E5F8 /* Pods_2Q_2QUITests.framework */; };
 		A2AD2E0C460D06C567F88C50 /* Pods_2QTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7486644D7C1D660FF4556E3F /* Pods_2QTests.framework */; };
 		CFF4C374036959B52799918F /* Pods_2Q.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857F301FA88CCA8CCD5E1968 /* Pods_2Q.framework */; };
@@ -54,6 +55,7 @@
 		35B08372255489D800CE4A3D /* 2QUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 2QUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B08376255489D800CE4A3D /* _QUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _QUITests.swift; sourceTree = "<group>"; };
 		35B08378255489D800CE4A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35F964BA25589C6100B2A8B0 /* CreateQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQueueViewController.swift; sourceTree = "<group>"; };
 		4929CDAA6102DE2D381DF55A /* Pods-2QTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2QTests.debug.xcconfig"; path = "Target Support Files/Pods-2QTests/Pods-2QTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7486644D7C1D660FF4556E3F /* Pods_2QTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2QTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		857F301FA88CCA8CCD5E1968 /* Pods_2Q.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2Q.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				35B08362255489D700CE4A3D /* Info.plist */,
 				FEC334A1255506530091D972 /* SignUpViewController.swift */,
 				35569BAB255516070076C2FB /* SignInViewController.swift */,
+				35F964BA25589C6100B2A8B0 /* CreateQueueViewController.swift */,
 			);
 			path = 2Q;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35569BAC255516070076C2FB /* SignInViewController.swift in Sources */,
+				35F964BB25589C6100B2A8B0 /* CreateQueueViewController.swift in Sources */,
 				FEC334A2255506530091D972 /* SignUpViewController.swift in Sources */,
 				35B08355255489D100CE4A3D /* AppDelegate.swift in Sources */,
 				35B08357255489D100CE4A3D /* SceneDelegate.swift in Sources */,
