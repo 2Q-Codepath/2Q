@@ -138,6 +138,7 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
     - (Update/PUT) Update user(s) position in queue
 
 ### Progress
+Sprint 1
 **Sign Up**
 
 <img src="https://i.imgur.com/BLl37WV.gif" width=200>
@@ -145,3 +146,10 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
 **Sign In**
 
 <img src="https://i.imgur.com/ewPnGe3.gif" width=200>
+
+Sprint 2
+
+**Homepage**
+
+<img src="https://i.imgur.com/Xr3AsZ3.gif" width=200>
+
