@@ -8,6 +8,14 @@
 import UIKit
 
 class QueueViewController: UIViewController, UITableViewDataSource, UITabBarDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
 
     @IBOutlet weak var tableview: UITableView!
     
