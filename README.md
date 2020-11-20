@@ -153,3 +153,8 @@ Sprint 2
 
 <img src="https://i.imgur.com/Xr3AsZ3.gif" width=200>
 
+Sprint 3
+
+**My Queues and Queue Page** 
+
+<img src="https://i.imgur.com/6rvRD2Q.gif" width=200>
