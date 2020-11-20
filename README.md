@@ -25,11 +25,11 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
 **Required Must-have Stories**
 
 - [x] User sign up
-- [ ] Queue page
+- [x] Queue page
 - [x] User login
 - [x] Home - Queue viewer
 - [ ] Explore page
-- [ ] Current in line queues
+- [x] Current in line queues
 - [x] Create a queue
 - [ ] Profile page
 
