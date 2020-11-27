@@ -809,6 +809,9 @@
                             </searchBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-aC-Q4n">
                                 <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <connections>
+                                    <outlet property="delegate" destination="a5a-CQ-7s0" id="U0u-dz-I4s"/>
+                                </connections>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UJ9-LW-66b">
                                 <rect key="frame" x="11" y="355" width="364" height="252"/>
@@ -935,6 +938,7 @@
                     <connections>
                         <outlet property="ExploreMap" destination="VuN-aC-Q4n" id="v5D-A0-h8Z"/>
                         <outlet property="collectionView" destination="UJ9-LW-66b" id="1rv-RH-qau"/>
+                        <outlet property="searchBar" destination="vgx-a4-8dq" id="2hb-FR-1jZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1A5-h8-91B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

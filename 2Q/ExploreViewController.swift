@@ -6,21 +6,23 @@
 //
 import UIKit
 import MapKit
-import UIKit
 import Parse
 import AlamofireImage
 
-class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate{
 
     @IBOutlet weak var ExploreMap: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var queue = [PFObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        //self.collectionView.reloadData()//not sure
+        searchBar.delegate = self
+        
         //fix layout
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
                //layout.minimumLineSpacing = 5
@@ -30,7 +32,43 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
              //  layout.itemSize = CGSize(width: width, height: width*1/2)
 
     }
-    //not sure about this one
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let searchRequest = MKLocalSearch.Request()
+        searchRequest.naturalLanguageQuery = searchBar.text
+        
+        let activeSearch = MKLocalSearch(request: searchRequest)
+        activeSearch.start { (response, error) in
+            
+            if response == nil
+            {
+                print("search error")
+            }
+            else
+            {
+                //remove annotations
+                let annotations = self.ExploreMap.annotations
+                self.ExploreMap.removeAnnotations(annotations)
+                //get data
+                let latitude = response?.boundingRegion.center.latitude
+                let longitude = response?.boundingRegion.center.longitude
+                //add new annotation
+                let annotation = MKPointAnnotation()
+                annotation.title = searchBar.text
+                annotation.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
+                self.ExploreMap.addAnnotation(annotation)
+                //zoom-in on annotation
+                let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, longitude!)
+                let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+                let region = MKCoordinateRegion(center: coordinate, span: span)
+                self.ExploreMap.setRegion(region, animated: true)
+                
+            }
+        }
+        
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let query = PFQuery(className:"Queue")
@@ -43,7 +81,7 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
                 self.collectionView.reloadData()
             }
         }
-    } //not sure about this one
+    }
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
