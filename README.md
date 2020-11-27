@@ -28,13 +28,14 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
 - [x] Queue page
 - [x] User login
 - [x] Home - Queue viewer
-- [ ] Explore page
+- [x] Explore page
 - [x] Current in line queues
 - [x] Create a queue
-- [ ] Profile page
+
 
 **Optional Nice-to-have Stories**
 
+- [ ] Profile page
 - [ ] Business Login
 - [ ] QR code reservation confirmation
 - [ ] Recommended Queues
@@ -158,3 +159,10 @@ Sprint 3
 **My Queues and Queue Page** 
 
 <img src="https://i.imgur.com/6rvRD2Q.gif" width=200>
+
+Sprint 4
+
+**Explore Page** 
+
+<img src="http://g.recordit.co/6EV4KCQHF9.gif" width=200>
+
