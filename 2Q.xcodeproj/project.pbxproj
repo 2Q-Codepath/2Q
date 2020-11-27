@@ -21,6 +21,8 @@
 		BC733C042563238000FE58A7 /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC733C032563238000FE58A7 /* QueueViewController.swift */; };
 		CFF4C374036959B52799918F /* Pods_2Q.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857F301FA88CCA8CCD5E1968 /* Pods_2Q.framework */; };
 		E9C39C44255E024400A045B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C39C43255E024400A045B1 /* HomeViewController.swift */; };
+		FE31552C2570D6E300296BF9 /* ExploreQueueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE31552B2570D6E300296BF9 /* ExploreQueueCell.swift */; };
+		FE31552E2570D73500296BF9 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE31552D2570D73500296BF9 /* ExploreViewController.swift */; };
 		FEC334A2255506530091D972 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC334A1255506530091D972 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		D6CF1CA32A712A63E1720841 /* Pods-2Q-2QUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2Q-2QUITests.debug.xcconfig"; path = "Target Support Files/Pods-2Q-2QUITests/Pods-2Q-2QUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E0F197DB9EDA9CF6161661E6 /* Pods-2Q.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2Q.debug.xcconfig"; path = "Target Support Files/Pods-2Q/Pods-2Q.debug.xcconfig"; sourceTree = "<group>"; };
 		E9C39C43255E024400A045B1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FE31552B2570D6E300296BF9 /* ExploreQueueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreQueueCell.swift; sourceTree = "<group>"; };
+		FE31552D2570D73500296BF9 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FEC334A1255506530091D972 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +139,8 @@
 				35F964BA25589C6100B2A8B0 /* CreateQueueViewController.swift */,
 				E9C39C43255E024400A045B1 /* HomeViewController.swift */,
 				BC733C032563238000FE58A7 /* QueueViewController.swift */,
+				FE31552B2570D6E300296BF9 /* ExploreQueueCell.swift */,
+				FE31552D2570D73500296BF9 /* ExploreViewController.swift */,
 			);
 			path = 2Q;
 			sourceTree = "<group>";
@@ -423,6 +429,8 @@
 				BC733C042563238000FE58A7 /* QueueViewController.swift in Sources */,
 				FEC334A2255506530091D972 /* SignUpViewController.swift in Sources */,
 				35B08355255489D100CE4A3D /* AppDelegate.swift in Sources */,
+				FE31552E2570D73500296BF9 /* ExploreViewController.swift in Sources */,
+				FE31552C2570D6E300296BF9 /* ExploreQueueCell.swift in Sources */,
 				35B08357255489D100CE4A3D /* SceneDelegate.swift in Sources */,
 				E9C39C44255E024400A045B1 /* HomeViewController.swift in Sources */,
 			);
