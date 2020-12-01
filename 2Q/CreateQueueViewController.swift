@@ -53,6 +53,7 @@ class CreateQueueViewController: UIViewController, UIImagePickerControllerDelega
         queue.saveInBackground { (success, error) in
             if success {
                 print("created!")
+                self.performSegue(withIdentifier: "createSegue", sender: nil)
             } else {
                 print("error!")
             }
