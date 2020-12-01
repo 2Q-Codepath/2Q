@@ -34,9 +34,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         navigationItem.titleView = searchBar
                 
         // Do any additional setup after loading the view.
-        loadHosting()
-        loadQueuing()
-        loadSaved()
+        loadQueues()
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -44,61 +42,66 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.performSegue(withIdentifier: "SearchSegue", sender: nil)
     }
     
-    func loadHosting() {
-        let query = PFQuery(className: "Queue")
-        query.whereKey("host", equalTo: PFUser.current()!)
-        query.whereKey("live", equalTo: true)
-        query.includeKey("host")
-        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
-            if objects != nil {
-                self.sections["Hosting"] = objects
-                self.collectionView.reloadData()
-                print(self.sections)
-            } else {
-                print(error?.localizedDescription)
+    func loadQueues() {
+        DispatchQueue.global(qos: .userInteractive).async {
+            var results = [String: [PFObject]]()
+            
+            // load live hosting
+            var query = PFQuery(className: "Queue")
+            query.whereKey("host", equalTo: PFUser.current()!)
+            query.whereKey("live", equalTo: true)
+            query.includeKey("host")
+            
+            do {
+                let objects = try query.findObjects()
+                results["Hosting"] = objects
+            } catch {
+                print(error)
             }
-        }
-    }
-    
-    
-    func loadQueuing() {
-        let query = PFQuery(className: "Queuer")
-        query.whereKey("user", equalTo: PFUser.current()!)
-        query.includeKeys(["queue", "queue.host"])
-        query.selectKeys(["queue"])
-        query.findObjectsInBackground { (objects: [PFObject]?, error) in
-            if objects!.count > 0 {
-                var queues = [PFObject]()
-                for object in objects! {
-                    let queue = object["queue"] as? PFObject
-                    queues.append(queue!)
+            
+            // load queuing
+            query = PFQuery(className: "Queuer")
+            query.whereKey("user", equalTo: PFUser.current()!)
+            query.includeKeys(["queue", "queue.host"])
+            query.selectKeys(["queue"])
+            
+            do {
+                let objects = try query.findObjects()
+                if !objects.isEmpty {
+                    results["Queuing"] = []
+                    for object in objects {
+                        let queue = object["queue"] as? PFObject
+                        results["Queuing"]?.append(queue!)
+                    }
                 }
-                self.sections["Queuing"] = queues
-                self.collectionView.reloadData()
-            } else {
-                print("No Queuer Queues")
-                print(error?.localizedDescription)
+            } catch {
+                print(error)
             }
-        }
-    }
-    
-    func loadSaved() {
-        let query = PFQuery(className: "Saved")
-        query.whereKey("user", equalTo: PFUser.current()!)
-        query.includeKeys(["queue", "queue.host"])
-        query.selectKeys(["queue"])
-        query.findObjectsInBackground { (objects: [PFObject]?, error) in
-            if objects!.count > 0 {
-                var queues = [PFObject]()
-                for object in objects! {
-                    let queue = object["queue"] as? PFObject
-                    queues.append(queue!)
+            
+            // load live saved
+            query = PFQuery(className: "Saved")
+            query.whereKey("user", equalTo: PFUser.current()!)
+            query.includeKeys(["queue", "queue.host"])
+            query.selectKeys(["queue"])
+            do {
+                let objects = try query.findObjects()
+                if !objects.isEmpty {
+                    results["Saved"] = []
+                    for object in objects {
+                        let queue = object["queue"] as? PFObject
+                        let live = queue?["live"] as? Bool
+                        if live == true {
+                            results["Saved"]?.append(queue!)
+                        }
+                    }
                 }
-                self.sections["Saved"] = queues
+            } catch {
+                print(error)
+            }
+            
+            DispatchQueue.main.async {
+                self.sections = results
                 self.collectionView.reloadData()
-            } else {
-                print("No Queuer Queues")
-                print(error?.localizedDescription)
             }
         }
     }
