@@ -177,6 +177,16 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             tableView.deselectRow(at: indexpath, animated: true)
         }
         
+        else {
+            let cell = sender as! UITableViewCell
+            let indexpath = tableView.indexPath(for: cell)!
+            let user = users[indexpath.row]
+            let profileViewController = segue.destination as! ProfileViewController
+            profileViewController.user = user as? PFUser
+            
+            tableView.deselectRow(at: indexpath, animated: true)
+        }
+        
     }
     
 

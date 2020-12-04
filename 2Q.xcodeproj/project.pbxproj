@@ -14,6 +14,8 @@
 		35569BAC255516070076C2FB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35569BAB255516070076C2FB /* SignInViewController.swift */; };
 		3564B3F825723AE500B8A2BC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564B3F725723AE500B8A2BC /* SearchViewController.swift */; };
 		3564B3FD2572D00100B8A2BC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564B3FC2572D00000B8A2BC /* UserCell.swift */; };
+		357EEFD425770B8500EF33F2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357EEFD325770B8500EF33F2 /* ProfileViewController.swift */; };
+		358D442F2579D09D001B76D1 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358D442E2579D09D001B76D1 /* EditProfileViewController.swift */; };
 		35A0D8F62566227A00E29478 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A0D8F52566227A00E29478 /* LocationCell.swift */; };
 		35A0D8FB256622A400E29478 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A0D8FA256622A400E29478 /* DescriptionCell.swift */; };
 		35A0D91525697BBD00E29478 /* QueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A0D91425697BBC00E29478 /* QueueTableViewCell.swift */; };
@@ -64,6 +66,8 @@
 		35569BAB255516070076C2FB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3564B3F725723AE500B8A2BC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3564B3FC2572D00000B8A2BC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		357EEFD325770B8500EF33F2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		358D442E2579D09D001B76D1 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		35A0D8F52566227A00E29478 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		35A0D8FA256622A400E29478 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		35A0D91425697BBC00E29478 /* QueueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTableViewCell.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				3564B3F725723AE500B8A2BC /* SearchViewController.swift */,
 				FE31552B2570D6E300296BF9 /* ExploreQueueCell.swift */,
 				FE31552D2570D73500296BF9 /* ExploreViewController.swift */,
+				357EEFD325770B8500EF33F2 /* ProfileViewController.swift */,
+				358D442E2579D09D001B76D1 /* EditProfileViewController.swift */,
 			);
 			path = 2Q;
 			sourceTree = "<group>";
@@ -466,9 +472,11 @@
 				3564B3F825723AE500B8A2BC /* SearchViewController.swift in Sources */,
 				352E4104256CB38F00EF3EDE /* SectionCell.swift in Sources */,
 				352E4109256CE90500EF3EDE /* QueueCollectionViewCell.swift in Sources */,
+				357EEFD425770B8500EF33F2 /* ProfileViewController.swift in Sources */,
 				35F964BB25589C6100B2A8B0 /* CreateQueueViewController.swift in Sources */,
 				35A0D8F62566227A00E29478 /* LocationCell.swift in Sources */,
 				354DBA8725644F370025063F /* Queue.swift in Sources */,
+				358D442F2579D09D001B76D1 /* EditProfileViewController.swift in Sources */,
 				BC733C042563238000FE58A7 /* QueueViewController.swift in Sources */,
 				FEC334A2255506530091D972 /* SignUpViewController.swift in Sources */,
 				35A0D91A2569C41D00E29478 /* QueueNameCell.swift in Sources */,
