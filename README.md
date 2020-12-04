@@ -35,7 +35,7 @@ Mobile application that allows users to queue appointments ahead of time. Ideal 
 
 **Optional Nice-to-have Stories**
 
-- [ ] Profile page
+- [x] Profile page 
 - [ ] Business Login
 - [ ] QR code reservation confirmation
 - [ ] Recommended Queues
@@ -165,4 +165,9 @@ Sprint 4
 **Explore Page** 
 
 <img src="http://g.recordit.co/6EV4KCQHF9.gif" width=200>
+
+**Profile Page** 
+
+<img src="https://i.imgur.com/GncES9w.gif" width=200>
+
 
