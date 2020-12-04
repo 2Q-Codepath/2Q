@@ -16,11 +16,15 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var lastnameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        signInButton.layer.cornerRadius = 8
+        signUpButton.layer.cornerRadius = 8
     }
     
     @IBAction func onSignUp(_ sender: Any) {

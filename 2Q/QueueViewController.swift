@@ -8,6 +8,8 @@
 import UIKit
 import Parse
 import AlamofireImage
+import CoreLocation
+import MapKit
 
 class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var photoView: UIImageView!
@@ -49,6 +51,9 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func openProfile(_ sender: Any) {
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if queue?.role == .host {
@@ -159,6 +164,26 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else if indexPath.row == 2 { // Location
             let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell") as! LocationCell
             cell.addressLabel.text = queue?.location
+            
+            var geocoder = CLGeocoder()
+            geocoder.geocodeAddressString(queue?.location ?? "") {
+                placemarks, error in
+                let placemark = placemarks?.first
+                
+                let coordinate = placemark?.location?.coordinate
+                let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+                let location = CLLocationCoordinate2DMake(coordinate?.latitude ?? 0, coordinate?.longitude ?? 0)
+                
+                let region = MKCoordinateRegion.init(center: location, span: span)
+                
+//                cell.mapView.setCenter(coordinate!, animated: false)
+                cell.mapView.setRegion(region, animated: false)
+                
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = coordinate!
+                cell.mapView.addAnnotation(annotation)
+                
+            }
             return cell
         } else { // Description
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionCell") as! DescriptionCell
@@ -192,6 +217,9 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let nav = segue.destination as! UINavigationController
             let queuersViewController = nav.topViewController as! QueuersViewController
             queuersViewController.queuers = queue?.queuers ?? []
+        } else if segue.identifier == "ProfileSegue" {
+            let profileViewController = segue.destination as! ProfileViewController
+            profileViewController.user = queue?.host
         }
          
     }
